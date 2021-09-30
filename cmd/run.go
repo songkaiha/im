@@ -1,6 +1,10 @@
 package main
 
-import "time"
+import (
+	models "github.com/songkaiha/im/model"
+	routers "github.com/songkaiha/im/router"
+	"time"
+)
 
 func main() {
 	//时间初始化
