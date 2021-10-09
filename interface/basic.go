@@ -2,8 +2,10 @@ package interfaces
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 	"github.com/songkaiha/im/model"
+	"net/http"
 	"runtime"
 )
 
@@ -27,4 +29,11 @@ func PrintMemStats() {
 		"NumForcedGC":      ms.NumForcedGC,
 		"NumGoroutine":     runtime.NumGoroutine(),
 	}).Info("sys-info")
+}
+
+func Validator(ctx *gin.Context) {
+	if ctx.GetHeader("token") != "6733b42e28cdba32" {
+		ctx.JSON(http.StatusOK, gin.H{"code": http.StatusUnauthorized, "error": http.StatusText(http.StatusUnauthorized)})
+		ctx.Abort()
+	}
 }
