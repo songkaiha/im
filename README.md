@@ -3,7 +3,8 @@ im v0.0.1
 
 [![Language](https://img.shields.io/badge/Language-Go-blue.svg)](https://golang.org/)
 [![Build Status](https://github.com/songkaiha/im/workflows/sk/badge.svg)](https://github.com/songkaiha/im/actions)
-
+[![Go doc](https://img.shields.io/badge/go.dev-reference-brightgreen?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/songkaiha/im)
+[![Go Report Card](https://goreportcard.com/badge/github.com/songkaiha/im)](https://goreportcard.com/report/github.com/songkaiha/im)
 基于go语言开发的im，使用websocket.
 
 ---------------------------------------
