@@ -92,3 +92,11 @@ func IsOnline(ctx *gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, gin.H{"code": http.StatusOK, "error": CodeError})
 }
+
+func Total(ctx *gin.Context) {
+	var data map[string]interface{}
+	data = map[string]interface{}{
+		"total": len(models.AllClients),
+	}
+	ctx.JSON(http.StatusOK, gin.H{"code": http.StatusOK, "error": "", "data": data})
+}

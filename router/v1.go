@@ -22,6 +22,7 @@ func v1init(App *gin.Engine) {
 	v1Router.GET("conn", v1.Conn)
 	v1Router.POST("send", v1.Send)
 	v1Router.POST("isOnline", v1.IsOnline)
+	v1Router.GET("total", v1.Total)
 
 }
 
